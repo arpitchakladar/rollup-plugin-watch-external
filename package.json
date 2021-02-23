@@ -1,0 +1,25 @@
+{
+	"name": "rollup-plugin-watch-external",
+	"version": "1.0.0",
+	"description": "Rollup plugin to add additional files to the rollup watch files list.",
+	"main": "dist/index.js",
+	"repository": "https://github.com/arpitchakladar/rollup-plugin-watch-external",
+	"author": "Arpit Chakladar",
+	"license": "MIT",
+	"private": false,
+	"scripts": {
+		"build": "rm -rf dist && rollup -c"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^17.1.0",
+		"rollup": "^2.39.0",
+		"rollup-plugin-typescript2": "^0.30.0",
+		"typescript": "^4.1.5"
+	},
+	"dependencies": {
+		"fast-glob": "^3.2.5"
+	},
+	"peerDependencies": {
+		"rollup": "^2.39.0"
+	}
+}

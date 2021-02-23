@@ -1,0 +1,12 @@
+.vscode
+.gitignore
+node_modules
+src
+.git
+.github
+README.md
+**.log
+rollup.config.js
+tsconfig.json
+yarn.lock
+package-lock.json

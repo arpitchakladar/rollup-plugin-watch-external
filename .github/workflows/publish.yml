@@ -1,0 +1,27 @@
+name: "Publish npm package"
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  publish:
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - uses: "actions/checkout@v2"
+      - name: "Use Node.js"
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
+          always-auth: true
+          registry-url: "https://registry.npmjs.org"
+      - name: "Install depedencies"
+        run: "yarn"
+      - name: "Build npm package"
+        run: "yarn build"
+      - name: "Publish package"
+        run: "yarn publish"
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
